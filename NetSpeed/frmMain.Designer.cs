@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             this.btnCheckSpeed = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // btnCheckSpeed
             // 
-            this.btnCheckSpeed.Location = new System.Drawing.Point(515, 12);
+            this.btnCheckSpeed.Location = new System.Drawing.Point(12, 12);
             this.btnCheckSpeed.Name = "btnCheckSpeed";
             this.btnCheckSpeed.Size = new System.Drawing.Size(112, 27);
             this.btnCheckSpeed.TabIndex = 0;
@@ -41,11 +42,19 @@
             this.btnCheckSpeed.UseVisualStyleBackColor = true;
             this.btnCheckSpeed.Click += new System.EventHandler(this.btnCheckSpeed_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(327, 46);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(523, 454);
+            this.panel1.TabIndex = 1;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(639, 369);
+            this.ClientSize = new System.Drawing.Size(862, 512);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCheckSpeed);
             this.Name = "frmMain";
             this.Text = "Form1";
@@ -56,6 +65,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnCheckSpeed;
+        public System.Windows.Forms.Panel panel1;
     }
 }
 

@@ -12,6 +12,9 @@ namespace NetSpeed
 {
     public partial class frmMain : Form
     {
+        double dSpeed;
+        ucStatWeb ucSW;
+
         public frmMain()
         {
             InitializeComponent();
@@ -38,8 +41,21 @@ namespace NetSpeed
         private void btnCheckSpeed_Click(object sender, EventArgs e)
         {
             string strUnit = "kb per sec";
-            MessageBox.Show(CheckInternetSpeed().ToString() + strUnit);
-            MessageBox.Show(CheckInternetSpeed("http://iskon.hr").ToString() + strUnit);
+            dSpeed = CheckInternetSpeed();
+            MessageBox.Show(dSpeed.ToString() + strUnit);
+            //MessageBox.Show(CheckInternetSpeed("http://iskon.hr").ToString() + strUnit);
+
+            // for test add UC on form and data in
+            //TODO: ovo završi
+            //panel1.ControlAdded()
+
+            ucSW = new ucStatWeb();
+            //this.Controls.Add(ucSW);
+            panel1.Controls.Add(ucSW);
+            ucSW.Left = 1;
+            ucSW.Top = 1;
+            ucSW.txtURL.Text = "Google.com";
+
         }
     }
 }

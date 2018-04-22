@@ -46,6 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dsSpeed.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsSpeed.xsd</DependentUpon>
+    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +80,17 @@
     <EmbeddedResource Include="ucStatWeb.resx">
       <DependentUpon>ucStatWeb.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="dsSpeed.xsc">
+      <DependentUpon>dsSpeed.xsd</DependentUpon>
+    </None>
+    <None Include="dsSpeed.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsSpeed.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsSpeed.xss">
+      <DependentUpon>dsSpeed.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
