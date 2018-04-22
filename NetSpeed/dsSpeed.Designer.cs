@@ -436,8 +436,7 @@ namespace NetSpeed {
                 this.columnspeed = new global::System.Data.DataColumn("speed", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnspeed);
                 this.columnID.AutoIncrement = true;
-                this.columnID.AutoIncrementSeed = -1;
-                this.columnID.AutoIncrementStep = -1;
+                this.columnID.AutoIncrementSeed = 1;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

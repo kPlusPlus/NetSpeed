@@ -28,10 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtURL = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dsSpeed = new NetSpeed.dsSpeed();
+            this.dsSpeedBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ucDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.webDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.speedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsSpeed)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsSpeedBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // txtURL
@@ -52,11 +61,53 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDDataGridViewTextBoxColumn,
+            this.ucDataGridViewTextBoxColumn,
+            this.webDataGridViewTextBoxColumn,
+            this.speedDataGridViewTextBoxColumn});
+            this.dataGridView1.DataMember = "InternetSpeed";
+            this.dataGridView1.DataSource = this.dsSpeedBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(7, 55);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(349, 378);
+            this.dataGridView1.Size = new System.Drawing.Size(544, 378);
             this.dataGridView1.TabIndex = 2;
+            // 
+            // dsSpeed
+            // 
+            this.dsSpeed.DataSetName = "dsSpeed";
+            this.dsSpeed.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dsSpeedBindingSource
+            // 
+            this.dsSpeedBindingSource.DataSource = this.dsSpeed;
+            this.dsSpeedBindingSource.Position = 0;
+            // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            // 
+            // ucDataGridViewTextBoxColumn
+            // 
+            this.ucDataGridViewTextBoxColumn.DataPropertyName = "uc";
+            this.ucDataGridViewTextBoxColumn.HeaderText = "uc";
+            this.ucDataGridViewTextBoxColumn.Name = "ucDataGridViewTextBoxColumn";
+            // 
+            // webDataGridViewTextBoxColumn
+            // 
+            this.webDataGridViewTextBoxColumn.DataPropertyName = "web";
+            this.webDataGridViewTextBoxColumn.HeaderText = "web";
+            this.webDataGridViewTextBoxColumn.Name = "webDataGridViewTextBoxColumn";
+            // 
+            // speedDataGridViewTextBoxColumn
+            // 
+            this.speedDataGridViewTextBoxColumn.DataPropertyName = "speed";
+            this.speedDataGridViewTextBoxColumn.HeaderText = "speed";
+            this.speedDataGridViewTextBoxColumn.Name = "speedDataGridViewTextBoxColumn";
             // 
             // ucStatWeb
             // 
@@ -66,8 +117,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtURL);
             this.Name = "ucStatWeb";
-            this.Size = new System.Drawing.Size(359, 436);
+            this.Size = new System.Drawing.Size(554, 436);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsSpeed)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsSpeedBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -78,5 +131,11 @@
         public System.Windows.Forms.TextBox txtURL;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ucDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn webDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn speedDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource dsSpeedBindingSource;
+        private dsSpeed dsSpeed;
     }
 }

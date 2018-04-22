@@ -13,15 +13,20 @@ namespace NetSpeed
     public partial class frmMain : Form
     {
         double dSpeed;
+        string sURL;
         ucStatWeb ucSW;
+        dsSpeed dsSpeedD;
+
 
         public frmMain()
         {
             InitializeComponent();
+            dsSpeedD = new dsSpeed();
         }
 
         public double CheckInternetSpeed(string strURL = "http://google.com")
         {
+            sURL = strURL;
             // Create Object Of WebClient
             System.Net.WebClient wc = new System.Net.WebClient();
 
@@ -50,12 +55,20 @@ namespace NetSpeed
             //panel1.ControlAdded()
 
             ucSW = new ucStatWeb();
-            //this.Controls.Add(ucSW);
             panel1.Controls.Add(ucSW);
             ucSW.Left = 1;
             ucSW.Top = 1;
-            ucSW.txtURL.Text = "Google.com";
+            ucSW.txtURL.Text = sURL;
+            
+            dsSpeed.InternetSpeedRow rowDS = dsSpeedD.InternetSpeed.NewInternetSpeedRow();
+            
+            rowDS.uc = 1;
+            rowDS.web = sURL;
+            rowDS.speed = dSpeed;
+            dsSpeedD.InternetSpeed.Rows.Add(rowDS);
 
+            ucSW.dataGridView1.DataSource = dsSpeedD;
+            //ucSW.dataGridView1.Refresh();
         }
     }
 }
