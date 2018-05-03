@@ -45,6 +45,13 @@ namespace NetSpeed
 
         private void btnCheckSpeed_Click(object sender, EventArgs e)
         {
+            if (!panel1.Controls.Contains(ucSW))
+            {
+                ucSW = new ucStatWeb();
+                panel1.Controls.Add(ucSW);
+                ucSW.txtURL.Text = txtURLmain.Text;
+            }
+            /*
             string strUnit = "kb per sec";
             dSpeed = CheckInternetSpeed();
             MessageBox.Show(dSpeed.ToString() + strUnit);
@@ -68,7 +75,8 @@ namespace NetSpeed
             dsSpeedD.InternetSpeed.Rows.Add(rowDS);
 
             ucSW.dataGridView1.DataSource = dsSpeedD;
-            //ucSW.dataGridView1.Refresh();
+            */
+            
         }
     }
 }

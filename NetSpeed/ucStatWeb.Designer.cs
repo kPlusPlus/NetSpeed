@@ -32,15 +32,16 @@
             this.txtURL = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dsSpeed = new NetSpeed.dsSpeed();
-            this.dsSpeedBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ucDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.webDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.speedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dsSpeedBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsSpeed = new NetSpeed.dsSpeed();
+            this.btnCheck = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsSpeed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsSpeedBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsSpeed)).BeginInit();
             this.SuspendLayout();
             // 
             // txtURL
@@ -75,16 +76,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(544, 378);
             this.dataGridView1.TabIndex = 2;
             // 
-            // dsSpeed
-            // 
-            this.dsSpeed.DataSetName = "dsSpeed";
-            this.dsSpeed.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dsSpeedBindingSource
-            // 
-            this.dsSpeedBindingSource.DataSource = this.dsSpeed;
-            this.dsSpeedBindingSource.Position = 0;
-            // 
             // iDDataGridViewTextBoxColumn
             // 
             this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
@@ -109,18 +100,39 @@
             this.speedDataGridViewTextBoxColumn.HeaderText = "speed";
             this.speedDataGridViewTextBoxColumn.Name = "speedDataGridViewTextBoxColumn";
             // 
+            // dsSpeedBindingSource
+            // 
+            this.dsSpeedBindingSource.DataSource = this.dsSpeed;
+            this.dsSpeedBindingSource.Position = 0;
+            // 
+            // dsSpeed
+            // 
+            this.dsSpeed.DataSetName = "dsSpeed";
+            this.dsSpeed.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // btnCheck
+            // 
+            this.btnCheck.Location = new System.Drawing.Point(416, 19);
+            this.btnCheck.Name = "btnCheck";
+            this.btnCheck.Size = new System.Drawing.Size(135, 29);
+            this.btnCheck.TabIndex = 3;
+            this.btnCheck.Text = "Check speed";
+            this.btnCheck.UseVisualStyleBackColor = true;
+            this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
+            // 
             // ucStatWeb
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnCheck);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtURL);
             this.Name = "ucStatWeb";
             this.Size = new System.Drawing.Size(554, 436);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsSpeed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsSpeedBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsSpeed)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,7 +147,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ucDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn webDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn speedDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource dsSpeedBindingSource;
-        private dsSpeed dsSpeed;
+        private System.Windows.Forms.Button btnCheck;
+        public System.Windows.Forms.BindingSource dsSpeedBindingSource;
+        public dsSpeed dsSpeed;
     }
 }
