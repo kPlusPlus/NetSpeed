@@ -51,31 +51,7 @@ namespace NetSpeed
                 panel1.Controls.Add(ucSW);
                 ucSW.txtURL.Text = txtURLmain.Text;
             }
-            /*
-            string strUnit = "kb per sec";
-            dSpeed = CheckInternetSpeed();
-            MessageBox.Show(dSpeed.ToString() + strUnit);
-            //MessageBox.Show(CheckInternetSpeed("http://iskon.hr").ToString() + strUnit);
-
-            // for test add UC on form and data in
-            //TODO: ovo završi
-            //panel1.ControlAdded()
-
-            ucSW = new ucStatWeb();
-            panel1.Controls.Add(ucSW);
-            ucSW.Left = 1;
-            ucSW.Top = 1;
-            ucSW.txtURL.Text = sURL;
             
-            dsSpeed.InternetSpeedRow rowDS = dsSpeedD.InternetSpeed.NewInternetSpeedRow();
-            
-            rowDS.uc = 1;
-            rowDS.web = sURL;
-            rowDS.speed = dSpeed;
-            dsSpeedD.InternetSpeed.Rows.Add(rowDS);
-
-            ucSW.dataGridView1.DataSource = dsSpeedD;
-            */
             
         }
     }

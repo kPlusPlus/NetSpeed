@@ -39,6 +39,8 @@
             this.dsSpeedBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dsSpeed = new NetSpeed.dsSpeed();
             this.btnCheck = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsSpeedBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsSpeed)).BeginInit();
@@ -112,18 +114,30 @@
             // 
             // btnCheck
             // 
-            this.btnCheck.Location = new System.Drawing.Point(416, 19);
+            this.btnCheck.Location = new System.Drawing.Point(351, 10);
             this.btnCheck.Name = "btnCheck";
-            this.btnCheck.Size = new System.Drawing.Size(135, 29);
+            this.btnCheck.Size = new System.Drawing.Size(90, 29);
             this.btnCheck.TabIndex = 3;
             this.btnCheck.Text = "Check speed";
             this.btnCheck.UseVisualStyleBackColor = true;
             this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
             // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(448, 10);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(103, 29);
+            this.btnSave.TabIndex = 4;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
             // ucStatWeb
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Moccasin;
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnCheck);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
@@ -150,5 +164,7 @@
         private System.Windows.Forms.Button btnCheck;
         public System.Windows.Forms.BindingSource dsSpeedBindingSource;
         public dsSpeed dsSpeed;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
