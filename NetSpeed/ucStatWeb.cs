@@ -41,7 +41,8 @@ namespace NetSpeed
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-
+            dsSpeed.WriteXml("test.xml");
+            MessageBox.Show("data is saved");
         }
     }
 }

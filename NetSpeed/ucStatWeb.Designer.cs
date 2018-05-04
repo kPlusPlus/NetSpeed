@@ -48,7 +48,7 @@
             // 
             // txtURL
             // 
-            this.txtURL.Location = new System.Drawing.Point(145, 19);
+            this.txtURL.Location = new System.Drawing.Point(84, 19);
             this.txtURL.Name = "txtURL";
             this.txtURL.Size = new System.Drawing.Size(200, 20);
             this.txtURL.TabIndex = 0;
@@ -114,7 +114,7 @@
             // 
             // btnCheck
             // 
-            this.btnCheck.Location = new System.Drawing.Point(351, 10);
+            this.btnCheck.Location = new System.Drawing.Point(290, 3);
             this.btnCheck.Name = "btnCheck";
             this.btnCheck.Size = new System.Drawing.Size(90, 29);
             this.btnCheck.TabIndex = 3;
@@ -124,7 +124,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(448, 10);
+            this.btnSave.Location = new System.Drawing.Point(386, 3);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(103, 29);
             this.btnSave.TabIndex = 4;
@@ -143,7 +143,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtURL);
             this.Name = "ucStatWeb";
-            this.Size = new System.Drawing.Size(554, 436);
+            this.Size = new System.Drawing.Size(497, 436);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsSpeedBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsSpeed)).EndInit();

@@ -1,0 +1,2 @@
+﻿* dodaj još da se može dodavati više user controls
+uspoređivati itd..
