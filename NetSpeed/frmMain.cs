@@ -48,21 +48,21 @@ namespace NetSpeed
 
         private void btnCheckSpeed_Click(object sender, EventArgs e)
         {
-            Array.Resize(ref ucSW, 1);
-            ucSW[0] = new ucStatWeb();
-            
-            panel1.Controls.Add(ucSW[0]);
-            ucSW[0].txtURL.Text = txtURLmain.Text;
-
-            /*
-            if (!panel1.Controls.Contains(ucSW))
+            if (ucSW == null)
             {
-                ucSW = new ucStatWeb();
-                panel1.Controls.Add(ucSW);
-                ucSW.txtURL.Text = txtURLmain.Text;
-            } 
-            */
+                countuc = 1;
+            }
+            else
+            {
+                countuc = ucSW.Length + 1;
+            }
 
+            Array.Resize(ref ucSW, countuc);
+            ucSW[countuc - 1] = new ucStatWeb();
+            
+            panel1.Controls.Add(ucSW[countuc - 1]);
+            ucSW[countuc - 1].txtURL.Text = txtURLmain.Text;
+            ucSW[countuc - 1].Left = (countuc - 1)* ucSW[countuc - 1].Width;
         }
     }
 }
