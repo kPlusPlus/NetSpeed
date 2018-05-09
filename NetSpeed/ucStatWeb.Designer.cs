@@ -41,6 +41,8 @@
             this.btnCheck = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.btnLoad = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsSpeedBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsSpeed)).BeginInit();
@@ -48,7 +50,7 @@
             // 
             // txtURL
             // 
-            this.txtURL.Location = new System.Drawing.Point(84, 19);
+            this.txtURL.Location = new System.Drawing.Point(84, 8);
             this.txtURL.Name = "txtURL";
             this.txtURL.Size = new System.Drawing.Size(200, 20);
             this.txtURL.TabIndex = 0;
@@ -56,7 +58,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 19);
+            this.label1.Location = new System.Drawing.Point(4, 8);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 13);
             this.label1.TabIndex = 1;
@@ -73,9 +75,9 @@
             this.speedDataGridViewTextBoxColumn});
             this.dataGridView1.DataMember = "InternetSpeed";
             this.dataGridView1.DataSource = this.dsSpeedBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(7, 55);
+            this.dataGridView1.Location = new System.Drawing.Point(7, 73);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(544, 378);
+            this.dataGridView1.Size = new System.Drawing.Size(482, 360);
             this.dataGridView1.TabIndex = 2;
             // 
             // iDDataGridViewTextBoxColumn
@@ -132,11 +134,26 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // btnLoad
+            // 
+            this.btnLoad.Location = new System.Drawing.Point(386, 38);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(103, 29);
+            this.btnLoad.TabIndex = 5;
+            this.btnLoad.Text = "Load";
+            this.btnLoad.UseVisualStyleBackColor = true;
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // ucStatWeb
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Moccasin;
+            this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnCheck);
             this.Controls.Add(this.dataGridView1);
@@ -166,5 +183,7 @@
         public dsSpeed dsSpeed;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.Button btnLoad;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

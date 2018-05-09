@@ -50,8 +50,7 @@ namespace NetSpeed
                 ucSW = new ucStatWeb();
                 panel1.Controls.Add(ucSW);
                 ucSW.txtURL.Text = txtURLmain.Text;
-            }
-            
+            }            
             
         }
     }

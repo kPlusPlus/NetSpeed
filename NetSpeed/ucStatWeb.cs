@@ -41,8 +41,21 @@ namespace NetSpeed
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            dsSpeed.WriteXml("test.xml");
-            MessageBox.Show("data is saved");
+            saveFileDialog1.Filter = "*Kspeed file|*.kspd|All Files (*)|*.*";
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                dsSpeed.WriteXml(saveFileDialog1.FileName);
+                MessageBox.Show("data is saved in "+ saveFileDialog1.FileName);
+            }                
+        }
+
+        private void btnLoad_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = "*Kspeed file|*.kspd|All Files (*)|*.*";
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                dsSpeed.ReadXml(openFileDialog1.FileName); 
+            }
         }
     }
 }
