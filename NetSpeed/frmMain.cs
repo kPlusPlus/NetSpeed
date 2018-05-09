@@ -12,18 +12,20 @@ namespace NetSpeed
 {
     public partial class frmMain : Form
     {
-        double dSpeed;
-        string sURL;
-        ucStatWeb ucSW;
-        dsSpeed dsSpeedD;
+        //double dSpeed;
+        //string sURL;
+        ucStatWeb[] ucSW;
+        int countuc = 1;
+        //dsSpeed dsSpeedD;
 
 
         public frmMain()
         {
             InitializeComponent();
-            dsSpeedD = new dsSpeed();
+            //dsSpeedD = new dsSpeed();
         }
 
+        /*
         public double CheckInternetSpeed(string strURL = "http://google.com")
         {
             sURL = strURL;
@@ -42,16 +44,25 @@ namespace NetSpeed
             //To Calculate Speed in Kb Divide Value Of data by 1024 And Then by End Time Subtract Start Time To Know Download Per Second.
             return Math.Round((data.Length / 1024) / (dt2 - dt1).TotalSeconds, 2);
         }
+        */
 
         private void btnCheckSpeed_Click(object sender, EventArgs e)
         {
+            Array.Resize(ref ucSW, 1);
+            ucSW[0] = new ucStatWeb();
+            
+            panel1.Controls.Add(ucSW[0]);
+            ucSW[0].txtURL.Text = txtURLmain.Text;
+
+            /*
             if (!panel1.Controls.Contains(ucSW))
             {
                 ucSW = new ucStatWeb();
                 panel1.Controls.Add(ucSW);
                 ucSW.txtURL.Text = txtURLmain.Text;
-            }            
-            
+            } 
+            */
+
         }
     }
 }
