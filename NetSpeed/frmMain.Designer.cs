@@ -45,11 +45,13 @@
             // 
             // panel1
             // 
+            this.panel1.AutoScroll = true;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 43);
+            this.panel1.Location = new System.Drawing.Point(0, 29);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(862, 469);
+            this.panel1.Size = new System.Drawing.Size(862, 483);
             this.panel1.TabIndex = 1;
             // 
             // txtURLmain
