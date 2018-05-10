@@ -14,6 +14,7 @@ namespace NetSpeed
     {
         common cm;
         public int ControlNum;
+        public string sFileName;
 
         public ucStatWeb()
         {
@@ -47,6 +48,7 @@ namespace NetSpeed
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 dsSpeed.WriteXml(saveFileDialog1.FileName);
+                txtFileName.Text = sFileName = saveFileDialog1.FileName;
                 MessageBox.Show("data is saved in "+ saveFileDialog1.FileName);
             }                
         }
@@ -56,7 +58,8 @@ namespace NetSpeed
             openFileDialog1.Filter = "*Kspeed file|*.kspd|All Files (*)|*.*";
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                dsSpeed.ReadXml(openFileDialog1.FileName); 
+                dsSpeed.ReadXml(openFileDialog1.FileName);
+                txtFileName.Text = sFileName = openFileDialog1.FileName;
             }
         }
     }

@@ -32,11 +32,6 @@
             this.txtURL = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ucDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.webDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.speedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dsSpeedBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dsSpeed = new NetSpeed.dsSpeed();
             this.btnCheck = new System.Windows.Forms.Button();
@@ -45,6 +40,11 @@
             this.btnLoad = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.txtFileName = new System.Windows.Forms.TextBox();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ucDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.webDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.speedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsSpeedBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsSpeed)).BeginInit();
@@ -81,36 +81,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(482, 360);
             this.dataGridView1.TabIndex = 2;
-            // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            // 
-            // ucDataGridViewTextBoxColumn
-            // 
-            this.ucDataGridViewTextBoxColumn.DataPropertyName = "uc";
-            this.ucDataGridViewTextBoxColumn.HeaderText = "uc";
-            this.ucDataGridViewTextBoxColumn.Name = "ucDataGridViewTextBoxColumn";
-            // 
-            // webDataGridViewTextBoxColumn
-            // 
-            this.webDataGridViewTextBoxColumn.DataPropertyName = "web";
-            this.webDataGridViewTextBoxColumn.HeaderText = "web";
-            this.webDataGridViewTextBoxColumn.Name = "webDataGridViewTextBoxColumn";
-            // 
-            // speedDataGridViewTextBoxColumn
-            // 
-            this.speedDataGridViewTextBoxColumn.DataPropertyName = "speed";
-            this.speedDataGridViewTextBoxColumn.HeaderText = "speed";
-            this.speedDataGridViewTextBoxColumn.Name = "speedDataGridViewTextBoxColumn";
-            // 
-            // dateDataGridViewTextBoxColumn
-            // 
-            this.dateDataGridViewTextBoxColumn.DataPropertyName = "date";
-            this.dateDataGridViewTextBoxColumn.HeaderText = "date";
-            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
             // 
             // dsSpeedBindingSource
             // 
@@ -159,17 +129,58 @@
             // 
             // txtFileName
             // 
-            this.txtFileName.Location = new System.Drawing.Point(261, 38);
+            this.txtFileName.Location = new System.Drawing.Point(221, 38);
             this.txtFileName.Name = "txtFileName";
             this.txtFileName.ReadOnly = true;
-            this.txtFileName.Size = new System.Drawing.Size(119, 20);
+            this.txtFileName.Size = new System.Drawing.Size(159, 20);
             this.txtFileName.TabIndex = 6;
+            // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.MinimumWidth = 3;
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.Width = 43;
+            // 
+            // ucDataGridViewTextBoxColumn
+            // 
+            this.ucDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ucDataGridViewTextBoxColumn.DataPropertyName = "uc";
+            this.ucDataGridViewTextBoxColumn.HeaderText = "uc";
+            this.ucDataGridViewTextBoxColumn.Name = "ucDataGridViewTextBoxColumn";
+            this.ucDataGridViewTextBoxColumn.Width = 44;
+            // 
+            // webDataGridViewTextBoxColumn
+            // 
+            this.webDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.webDataGridViewTextBoxColumn.DataPropertyName = "web";
+            this.webDataGridViewTextBoxColumn.HeaderText = "web";
+            this.webDataGridViewTextBoxColumn.Name = "webDataGridViewTextBoxColumn";
+            this.webDataGridViewTextBoxColumn.Width = 52;
+            // 
+            // speedDataGridViewTextBoxColumn
+            // 
+            this.speedDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.speedDataGridViewTextBoxColumn.DataPropertyName = "speed";
+            this.speedDataGridViewTextBoxColumn.HeaderText = "speed";
+            this.speedDataGridViewTextBoxColumn.Name = "speedDataGridViewTextBoxColumn";
+            this.speedDataGridViewTextBoxColumn.Width = 61;
+            // 
+            // dateDataGridViewTextBoxColumn
+            // 
+            this.dateDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dateDataGridViewTextBoxColumn.DataPropertyName = "date";
+            this.dateDataGridViewTextBoxColumn.HeaderText = "date";
+            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            this.dateDataGridViewTextBoxColumn.Width = 53;
             // 
             // ucStatWeb
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.Controls.Add(this.txtFileName);
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.btnSave);
@@ -199,11 +210,11 @@
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.Button btnLoad;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.TextBox txtFileName;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ucDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn webDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn speedDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
+        public System.Windows.Forms.TextBox txtFileName;
     }
 }
