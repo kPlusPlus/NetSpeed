@@ -13,6 +13,7 @@ namespace NetSpeed
     public partial class ucStatWeb : UserControl
     {
         common cm;
+        public int ControlNum;
 
         public ucStatWeb()
         {
@@ -30,9 +31,10 @@ namespace NetSpeed
             {
                 cm.dSpeed = cm.CheckInternetSpeed(this.txtURL.Text.ToString());
                 dsSpeed.InternetSpeedRow rowDS = dsSpeed.InternetSpeed.NewInternetSpeedRow();
-                rowDS.uc = 1;
+                rowDS.uc = ControlNum;
                 rowDS.web = cm.sURL;
                 rowDS.speed = cm.dSpeed;
+                rowDS.date = (System.DateTime) DateTime.Now;
                 dsSpeed.InternetSpeed.Rows.Add(rowDS);
 
             }

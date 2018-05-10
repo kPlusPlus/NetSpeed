@@ -35,7 +35,7 @@
             // 
             // btnCheckSpeed
             // 
-            this.btnCheckSpeed.Location = new System.Drawing.Point(12, 12);
+            this.btnCheckSpeed.Location = new System.Drawing.Point(0, 0);
             this.btnCheckSpeed.Name = "btnCheckSpeed";
             this.btnCheckSpeed.Size = new System.Drawing.Size(112, 27);
             this.btnCheckSpeed.TabIndex = 0;
@@ -45,14 +45,16 @@
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(12, 46);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 43);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(838, 454);
+            this.panel1.Size = new System.Drawing.Size(862, 469);
             this.panel1.TabIndex = 1;
             // 
             // txtURLmain
             // 
-            this.txtURLmain.Location = new System.Drawing.Point(157, 12);
+            this.txtURLmain.Location = new System.Drawing.Point(118, 4);
             this.txtURLmain.Name = "txtURLmain";
             this.txtURLmain.Size = new System.Drawing.Size(274, 20);
             this.txtURLmain.TabIndex = 2;
@@ -62,12 +64,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(862, 512);
             this.Controls.Add(this.txtURLmain);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCheckSpeed);
             this.Name = "frmMain";
-            this.Text = "Form1";
+            this.Text = "kSpeed";
             this.ResumeLayout(false);
             this.PerformLayout();
 

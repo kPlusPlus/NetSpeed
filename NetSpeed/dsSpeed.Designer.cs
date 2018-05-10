@@ -287,6 +287,8 @@ namespace NetSpeed {
             
             private global::System.Data.DataColumn columnspeed;
             
+            private global::System.Data.DataColumn columndate;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public InternetSpeedDataTable() {
@@ -354,6 +356,14 @@ namespace NetSpeed {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn dateColumn {
+                get {
+                    return this.columndate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -389,13 +399,14 @@ namespace NetSpeed {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public InternetSpeedRow AddInternetSpeedRow(int uc, string web, double speed) {
+            public InternetSpeedRow AddInternetSpeedRow(int uc, string web, double speed, System.DateTime date) {
                 InternetSpeedRow rowInternetSpeedRow = ((InternetSpeedRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         uc,
                         web,
-                        speed};
+                        speed,
+                        date};
                 rowInternetSpeedRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowInternetSpeedRow);
                 return rowInternetSpeedRow;
@@ -422,6 +433,7 @@ namespace NetSpeed {
                 this.columnuc = base.Columns["uc"];
                 this.columnweb = base.Columns["web"];
                 this.columnspeed = base.Columns["speed"];
+                this.columndate = base.Columns["date"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -435,8 +447,12 @@ namespace NetSpeed {
                 base.Columns.Add(this.columnweb);
                 this.columnspeed = new global::System.Data.DataColumn("speed", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnspeed);
+                this.columndate = new global::System.Data.DataColumn("date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndate);
                 this.columnID.AutoIncrement = true;
                 this.columnID.AutoIncrementSeed = 1;
+                this.columnID.AllowDBNull = false;
+                this.columnuc.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -581,12 +597,7 @@ namespace NetSpeed {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int ID {
                 get {
-                    try {
-                        return ((int)(this[this.tableInternetSpeed.IDColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ID\' in table \'InternetSpeed\' is DBNull.", e);
-                    }
+                    return ((int)(this[this.tableInternetSpeed.IDColumn]));
                 }
                 set {
                     this[this.tableInternetSpeed.IDColumn] = value;
@@ -597,12 +608,7 @@ namespace NetSpeed {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int uc {
                 get {
-                    try {
-                        return ((int)(this[this.tableInternetSpeed.ucColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'uc\' in table \'InternetSpeed\' is DBNull.", e);
-                    }
+                    return ((int)(this[this.tableInternetSpeed.ucColumn]));
                 }
                 set {
                     this[this.tableInternetSpeed.ucColumn] = value;
@@ -643,26 +649,18 @@ namespace NetSpeed {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsIDNull() {
-                return this.IsNull(this.tableInternetSpeed.IDColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetIDNull() {
-                this[this.tableInternetSpeed.IDColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsucNull() {
-                return this.IsNull(this.tableInternetSpeed.ucColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetucNull() {
-                this[this.tableInternetSpeed.ucColumn] = global::System.Convert.DBNull;
+            public System.DateTime date {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableInternetSpeed.dateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'date\' in table \'InternetSpeed\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableInternetSpeed.dateColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -687,6 +685,18 @@ namespace NetSpeed {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetspeedNull() {
                 this[this.tableInternetSpeed.speedColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsdateNull() {
+                return this.IsNull(this.tableInternetSpeed.dateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetdateNull() {
+                this[this.tableInternetSpeed.dateColumn] = global::System.Convert.DBNull;
             }
         }
         

@@ -61,6 +61,7 @@ namespace NetSpeed
             ucSW[countuc - 1] = new ucStatWeb();
             
             panel1.Controls.Add(ucSW[countuc - 1]);
+            ucSW[countuc - 1].ControlNum = countuc;
             ucSW[countuc - 1].txtURL.Text = txtURLmain.Text;
             ucSW[countuc - 1].Left = (countuc - 1)* ucSW[countuc - 1].Width;
         }

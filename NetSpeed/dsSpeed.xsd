@@ -15,10 +15,11 @@
         <xs:element name="InternetSpeed" msprop:Generator_TableClassName="InternetSpeedDataTable" msprop:Generator_TableVarName="tableInternetSpeed" msprop:Generator_RowChangedName="InternetSpeedRowChanged" msprop:Generator_TablePropName="InternetSpeed" msprop:Generator_RowDeletingName="InternetSpeedRowDeleting" msprop:Generator_RowChangingName="InternetSpeedRowChanging" msprop:Generator_RowEvHandlerName="InternetSpeedRowChangeEventHandler" msprop:Generator_RowDeletedName="InternetSpeedRowDeleted" msprop:Generator_RowClassName="InternetSpeedRow" msprop:Generator_UserTableName="InternetSpeed" msprop:Generator_RowEvArgName="InternetSpeedRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" minOccurs="0" />
-              <xs:element name="uc" msprop:Generator_ColumnVarNameInTable="columnuc" msprop:Generator_ColumnPropNameInRow="uc" msprop:Generator_ColumnPropNameInTable="ucColumn" msprop:Generator_UserColumnName="uc" type="xs:int" minOccurs="0" />
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="uc" msprop:Generator_ColumnVarNameInTable="columnuc" msprop:Generator_ColumnPropNameInRow="uc" msprop:Generator_ColumnPropNameInTable="ucColumn" msprop:Generator_UserColumnName="uc" type="xs:int" />
               <xs:element name="web" msprop:Generator_ColumnVarNameInTable="columnweb" msprop:Generator_ColumnPropNameInRow="web" msprop:Generator_ColumnPropNameInTable="webColumn" msprop:Generator_UserColumnName="web" type="xs:string" minOccurs="0" />
               <xs:element name="speed" msprop:Generator_ColumnVarNameInTable="columnspeed" msprop:Generator_ColumnPropNameInRow="speed" msprop:Generator_ColumnPropNameInTable="speedColumn" msprop:Generator_UserColumnName="speed" type="xs:double" minOccurs="0" />
+              <xs:element name="date" msprop:Generator_ColumnVarNameInTable="columndate" msprop:Generator_ColumnPropNameInRow="date" msprop:Generator_ColumnPropNameInTable="dateColumn" msprop:Generator_UserColumnName="date" type="xs:dateTime" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
