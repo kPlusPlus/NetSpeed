@@ -32,6 +32,11 @@
             this.txtURL = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ucDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.webDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.speedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dsSpeedBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dsSpeed = new NetSpeed.dsSpeed();
             this.btnCheck = new System.Windows.Forms.Button();
@@ -40,11 +45,9 @@
             this.btnLoad = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.txtFileName = new System.Windows.Forms.TextBox();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ucDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.webDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.speedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtMin = new System.Windows.Forms.TextBox();
+            this.txtMax = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsSpeedBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsSpeed)).BeginInit();
@@ -52,6 +55,8 @@
             // 
             // txtURL
             // 
+            this.txtURL.AllowDrop = true;
+            this.txtURL.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.txtURL.Location = new System.Drawing.Point(84, 8);
             this.txtURL.Name = "txtURL";
             this.txtURL.Size = new System.Drawing.Size(200, 20);
@@ -81,6 +86,47 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(482, 360);
             this.dataGridView1.TabIndex = 2;
+            // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.MinimumWidth = 3;
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.Width = 43;
+            // 
+            // ucDataGridViewTextBoxColumn
+            // 
+            this.ucDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ucDataGridViewTextBoxColumn.DataPropertyName = "uc";
+            this.ucDataGridViewTextBoxColumn.HeaderText = "uc";
+            this.ucDataGridViewTextBoxColumn.Name = "ucDataGridViewTextBoxColumn";
+            this.ucDataGridViewTextBoxColumn.Width = 44;
+            // 
+            // webDataGridViewTextBoxColumn
+            // 
+            this.webDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.webDataGridViewTextBoxColumn.DataPropertyName = "web";
+            this.webDataGridViewTextBoxColumn.HeaderText = "web";
+            this.webDataGridViewTextBoxColumn.Name = "webDataGridViewTextBoxColumn";
+            this.webDataGridViewTextBoxColumn.Width = 52;
+            // 
+            // speedDataGridViewTextBoxColumn
+            // 
+            this.speedDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.speedDataGridViewTextBoxColumn.DataPropertyName = "speed";
+            this.speedDataGridViewTextBoxColumn.HeaderText = "speed";
+            this.speedDataGridViewTextBoxColumn.Name = "speedDataGridViewTextBoxColumn";
+            this.speedDataGridViewTextBoxColumn.Width = 61;
+            // 
+            // dateDataGridViewTextBoxColumn
+            // 
+            this.dateDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dateDataGridViewTextBoxColumn.DataPropertyName = "date";
+            this.dateDataGridViewTextBoxColumn.HeaderText = "date";
+            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            this.dateDataGridViewTextBoxColumn.Width = 53;
             // 
             // dsSpeedBindingSource
             // 
@@ -129,58 +175,45 @@
             // 
             // txtFileName
             // 
-            this.txtFileName.Location = new System.Drawing.Point(221, 38);
+            this.txtFileName.Location = new System.Drawing.Point(221, 47);
             this.txtFileName.Name = "txtFileName";
             this.txtFileName.ReadOnly = true;
             this.txtFileName.Size = new System.Drawing.Size(159, 20);
             this.txtFileName.TabIndex = 6;
             // 
-            // iDDataGridViewTextBoxColumn
+            // label2
             // 
-            this.iDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.MinimumWidth = 3;
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.Width = 43;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(218, 31);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(55, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "File name:";
             // 
-            // ucDataGridViewTextBoxColumn
+            // txtMin
             // 
-            this.ucDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ucDataGridViewTextBoxColumn.DataPropertyName = "uc";
-            this.ucDataGridViewTextBoxColumn.HeaderText = "uc";
-            this.ucDataGridViewTextBoxColumn.Name = "ucDataGridViewTextBoxColumn";
-            this.ucDataGridViewTextBoxColumn.Width = 44;
+            this.txtMin.Location = new System.Drawing.Point(35, 47);
+            this.txtMin.Name = "txtMin";
+            this.txtMin.ReadOnly = true;
+            this.txtMin.Size = new System.Drawing.Size(83, 20);
+            this.txtMin.TabIndex = 8;
             // 
-            // webDataGridViewTextBoxColumn
+            // txtMax
             // 
-            this.webDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.webDataGridViewTextBoxColumn.DataPropertyName = "web";
-            this.webDataGridViewTextBoxColumn.HeaderText = "web";
-            this.webDataGridViewTextBoxColumn.Name = "webDataGridViewTextBoxColumn";
-            this.webDataGridViewTextBoxColumn.Width = 52;
-            // 
-            // speedDataGridViewTextBoxColumn
-            // 
-            this.speedDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.speedDataGridViewTextBoxColumn.DataPropertyName = "speed";
-            this.speedDataGridViewTextBoxColumn.HeaderText = "speed";
-            this.speedDataGridViewTextBoxColumn.Name = "speedDataGridViewTextBoxColumn";
-            this.speedDataGridViewTextBoxColumn.Width = 61;
-            // 
-            // dateDataGridViewTextBoxColumn
-            // 
-            this.dateDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dateDataGridViewTextBoxColumn.DataPropertyName = "date";
-            this.dateDataGridViewTextBoxColumn.HeaderText = "date";
-            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
-            this.dateDataGridViewTextBoxColumn.Width = 53;
+            this.txtMax.Location = new System.Drawing.Point(124, 47);
+            this.txtMax.Name = "txtMax";
+            this.txtMax.ReadOnly = true;
+            this.txtMax.Size = new System.Drawing.Size(83, 20);
+            this.txtMax.TabIndex = 9;
             // 
             // ucStatWeb
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.Controls.Add(this.txtMax);
+            this.Controls.Add(this.txtMin);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.txtFileName);
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.btnSave);
@@ -216,5 +249,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn speedDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
         public System.Windows.Forms.TextBox txtFileName;
+        private System.Windows.Forms.Label label2;
+        public System.Windows.Forms.TextBox txtMin;
+        public System.Windows.Forms.TextBox txtMax;
     }
 }

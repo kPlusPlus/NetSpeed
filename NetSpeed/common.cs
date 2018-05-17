@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
+
 
 namespace NetSpeed
 {
@@ -12,6 +14,9 @@ namespace NetSpeed
         public string strURL;
         public string sURL;
         public double dSpeed;
+        public double dMin;
+        public double dMax;
+        public double dAvr;
 
         public double CheckInternetSpeed(string strURL = "http://google.com")
         {
@@ -31,5 +36,12 @@ namespace NetSpeed
             //To Calculate Speed in Kb Divide Value Of data by 1024 And Then by End Time Subtract Start Time To Know Download Per Second.
             return Math.Round((data.Length / 1024) / (dt2 - dt1).TotalSeconds, 2);
         }
+
+        public void CalcStat(DataSet ds)
+        {
+
+        }
+
+        
     }
 }
