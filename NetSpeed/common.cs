@@ -40,6 +40,10 @@ namespace NetSpeed
         public void CalcStat(DataSet ds)
         {
 
+            // take statistics
+            dMin = (double)ds.Tables[0].Compute("min(speed)",string.Empty);
+            dMax = (double)ds.Tables[0].Compute("max(speed)", string.Empty);
+
         }
 
         

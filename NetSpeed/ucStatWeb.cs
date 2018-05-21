@@ -38,6 +38,10 @@ namespace NetSpeed
                 rowDS.date = (System.DateTime) DateTime.Now;
                 dsSpeed.InternetSpeed.Rows.Add(rowDS);
 
+                cm.CalcStat(dsSpeed);
+                txtMin.Text = cm.dMin.ToString();
+                txtMax.Text = cm.dMax.ToString();
+
             }
             
         }
