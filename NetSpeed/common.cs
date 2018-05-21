@@ -16,6 +16,7 @@ namespace NetSpeed
         public double dSpeed;
         public double dMin;
         public double dMax;
+        public double dSigma;
         public double dAvr;
 
         public double CheckInternetSpeed(string strURL = "http://google.com")
@@ -43,6 +44,8 @@ namespace NetSpeed
             // take statistics
             dMin = (double)ds.Tables[0].Compute("min(speed)",string.Empty);
             dMax = (double)ds.Tables[0].Compute("max(speed)", string.Empty);
+            dAvr = (double)ds.Tables[0].Compute("AVG(speed)", string.Empty);
+
 
         }
 

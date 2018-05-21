@@ -48,6 +48,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtMin = new System.Windows.Forms.TextBox();
             this.txtMax = new System.Windows.Forms.TextBox();
+            this.txtAvr = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsSpeedBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsSpeed)).BeginInit();
@@ -192,25 +196,64 @@
             // 
             // txtMin
             // 
-            this.txtMin.Location = new System.Drawing.Point(35, 47);
+            this.txtMin.Location = new System.Drawing.Point(3, 47);
             this.txtMin.Name = "txtMin";
             this.txtMin.ReadOnly = true;
-            this.txtMin.Size = new System.Drawing.Size(83, 20);
+            this.txtMin.Size = new System.Drawing.Size(62, 20);
             this.txtMin.TabIndex = 8;
             // 
             // txtMax
             // 
-            this.txtMax.Location = new System.Drawing.Point(124, 47);
+            this.txtMax.Location = new System.Drawing.Point(71, 47);
             this.txtMax.Name = "txtMax";
             this.txtMax.ReadOnly = true;
-            this.txtMax.Size = new System.Drawing.Size(83, 20);
+            this.txtMax.Size = new System.Drawing.Size(67, 20);
             this.txtMax.TabIndex = 9;
+            // 
+            // txtAvr
+            // 
+            this.txtAvr.Location = new System.Drawing.Point(144, 47);
+            this.txtAvr.Name = "txtAvr";
+            this.txtAvr.ReadOnly = true;
+            this.txtAvr.Size = new System.Drawing.Size(67, 20);
+            this.txtAvr.TabIndex = 10;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(4, 31);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(24, 13);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Min";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(71, 31);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(27, 13);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Max";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(141, 31);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(47, 13);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Average";
             // 
             // ucStatWeb
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtAvr);
             this.Controls.Add(this.txtMax);
             this.Controls.Add(this.txtMin);
             this.Controls.Add(this.label2);
@@ -252,5 +295,9 @@
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.TextBox txtMin;
         public System.Windows.Forms.TextBox txtMax;
+        public System.Windows.Forms.TextBox txtAvr;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }

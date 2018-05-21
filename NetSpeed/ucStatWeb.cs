@@ -41,6 +41,7 @@ namespace NetSpeed
                 cm.CalcStat(dsSpeed);
                 txtMin.Text = cm.dMin.ToString();
                 txtMax.Text = cm.dMax.ToString();
+                txtAvr.Text = cm.dAvr.ToString();
 
             }
             
